@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RouteManagementActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingTop="32dp"
+            android:paddingBottom="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:textSize="32sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Administrar rutas"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="12dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginLeft="64dp"
+                android:layout_marginRight="64dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:gravity="right|center_vertical"
+                android:layout_marginRight="64dp">
+
+                <Button
+                    android:id="@+id/btn_create_route"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:onClick="redirectRouteInsertActivity"
+                    android:text="Crear ruta" />
+
+                <Button
+                    android:id="@+id/btn_create_route_report"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crear reporte"
+                    android:backgroundTint="@color/green1"
+                    android:layout_margin="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal">
+
+                <de.codecrafters.tableview.TableView
+                    xmlns:table="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/table_routes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    table:tableView_columnCount="4"
+                    table:tableView_headerColor="@color/table_header"
+                    android:layout_marginLeft="64dp"
+                    android:layout_marginRight="64dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginLeft="64dp"
+                android:layout_marginRight="64dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

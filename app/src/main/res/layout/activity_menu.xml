@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingTop="32dp"
+            android:paddingBottom="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txt_welcome"
+                android:textSize="32sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menú de administración"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="12dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginLeft="64dp"
+                android:layout_marginRight="64dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <!-- check students-->
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <LinearLayout
+                        android:layout_weight="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_check_students"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_boy"
+                            android:padding="10dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_check_students"
+                        android:lines="2"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:text="Consultar\nalumnos"
+                        android:textColor="@color/teal_700"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"/>
+                </LinearLayout>
+
+                <!-- check tutors-->
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <LinearLayout
+                        android:layout_weight="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_check_tutors"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_home"
+                            android:padding="10dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_check_tutors"
+                        android:lines="2"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:text="Consultar\ntutores"
+                        android:textColor="@color/teal_700"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"/>
+                </LinearLayout>
+
+                <!-- check monitors-->
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <LinearLayout
+                        android:layout_weight="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_check_monitors"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_friend"
+                            android:padding="10dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_check_monitors"
+                        android:lines="2"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:text="Consultar\nmonitores"
+                        android:textColor="@color/teal_700"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"/>
+                </LinearLayout>
+
+                <!-- check routes-->
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:onClick="redirectRouteManagementActivity"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_check_routes"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_route"
+                            android:padding="10dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_check_routes"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:lines="2"
+                        android:text="Consultar\nrutas"
+                        android:textColor="@color/teal_700"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <!-- check bus stops-->
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <LinearLayout
+                        android:layout_weight="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_check_bus_stops"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_bus_stop"
+                            android:padding="10dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_check_bus_stops"
+                        android:lines="2"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:text="Consultar\nparadas"
+                        android:textColor="@color/teal_700"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"/>
+                </LinearLayout>
+
+                <!-- check profile-->
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <LinearLayout
+                        android:layout_weight="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_check_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_user"
+                            android:padding="10dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_check_profile"
+                        android:lines="2"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:text="Consultar\nperfil"
+                        android:textColor="@color/teal_700"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"/>
+                </LinearLayout>
+
+                <!-- check chats-->
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <LinearLayout
+                        android:layout_weight="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_check_chats"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_chat"
+                            android:padding="10dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_check_chats"
+                        android:lines="2"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:text="Consultar\nchats"
+                        android:textColor="@color/teal_700"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"/>
+                </LinearLayout>
+
+                <!-- check code-->
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <LinearLayout
+                        android:layout_weight="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/img_check_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_code"
+                            android:padding="10dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_check_code"
+                        android:lines="2"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:text="Generar código\nde colegio"
+                        android:textColor="@color/teal_700"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginLeft="64dp"
+                android:layout_marginRight="64dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
